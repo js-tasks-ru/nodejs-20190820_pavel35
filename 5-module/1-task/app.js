@@ -29,7 +29,7 @@ router.post('/publish', async (ctx, next) => {
     ctx.throw(400, 'required field `message` is missing');
   }
 
-  clients.forEach((resolve) => {
+  clients.forEach(function(resolve) {
     resolve(msg);
   });
 
